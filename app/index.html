@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <title>BlocChat</title>
     <link rel="stylesheet" href="/styles/main.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
+
   <ui-view></ui-view>
+
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     
@@ -27,10 +31,12 @@
       };
       firebase.initializeApp(config);
     </script>
-
+    
+    <!-- Javascript -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/controllers/HomeCtrl.js"></script>
-    <script src="/scripts/services/rooms.js"></script>
+    <script src="/scripts/services/Rooms.js"></script>
     
 </body>
 </html>
