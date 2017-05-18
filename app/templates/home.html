@@ -1,8 +1,16 @@
 <div class="container" id="left-nav">
-  <div>
-    <h1>BlocChat</h1>
-    <ul ng-repeat="room in home.rooms">
-      <li>{{room.$id}}</li>
-    </ul>    
+    <div class="row nav-content">
+      <h1>BlocChat</h1>
+    </div>
+    
+    <div class="row nav-content">
+      <ul ng-repeat="room in home.rooms">
+        <li class="btn btn-block chat-rooms">{{room.$value}}</li>
+      </ul>
+    </div>
+      
+    <div class="row nav-content">
+      <button class="btn btn-block btn-create" ng-click="home.open()">New Chat Room</button>
+    </div>      
   </div>
 </div>

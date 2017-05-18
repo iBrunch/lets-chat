@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="modal-wrapper">
+    <div class="row">
+      <div class="col modal-title">
+        <h2>Create Room</h2>
+      </div>
+    </div>
+    
+    <div class="row modal-input">
+      <div class="col">
+        <input class="form-control" type="text" placeholder="Name your room" ng-model="newRoomName">
+      </div>
+    </div>
+    
+    <div class="row modal-buttons btn-group-lg">
+      <div class="col">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
+        <button class="btn btn-secondary" type="button" ng-click="$ctrl.cancel()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

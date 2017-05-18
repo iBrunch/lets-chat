@@ -1,0 +1,45 @@
+.btn-create { 
+  color: #ffffff; 
+  background-color: #FF5722; 
+  border-color: #FF5722; 
+} 
+ 
+.btn-create:hover, 
+.btn-create:focus, 
+.btn-create:active, 
+.btn-create.active, 
+.open .dropdown-toggle.btn-create { 
+  color: #ffffff; 
+  background-color: #FF764C; 
+  border-color: #FF5722; 
+} 
+ 
+.btn-create:active, 
+.btn-create.active, 
+.open .dropdown-toggle.btn-create { 
+  background-image: none; 
+} 
+ 
+.btn-create.disabled, 
+.btn-create[disabled], 
+fieldset[disabled] .btn-create, 
+.btn-create.disabled:hover, 
+.btn-create[disabled]:hover, 
+fieldset[disabled] .btn-create:hover, 
+.btn-create.disabled:focus, 
+.btn-create[disabled]:focus, 
+fieldset[disabled] .btn-create:focus, 
+.btn-create.disabled:active, 
+.btn-create[disabled]:active, 
+fieldset[disabled] .btn-create:active, 
+.btn-create.disabled.active, 
+.btn-create[disabled].active, 
+fieldset[disabled] .btn-create.active { 
+  background-color: #FF5722; 
+  border-color: #FF5722; 
+} 
+ 
+.btn-create .badge { 
+  color: #FF5722; 
+  background-color: #ffffff; 
+}
