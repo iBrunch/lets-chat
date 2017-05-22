@@ -8,13 +8,13 @@
     
     <div class="row modal-input">
       <div class="col">
-        <input class="form-control" type="text" placeholder="Name your room" ng-model="newRoomName">
+        <form name="newRoomForm">
+          <input class="form-control" type="text" placeholder="Name your room" name="roomName" ng-model="newRoomName" ng-minlength="1" ng-maxlength="100" required>
+        </form>
       </div>
     </div>
-    
-    <div class="row modal-buttons btn-group-lg">
-      <div class="col">
-        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
+      
+  <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
         <button class="btn btn-secondary" type="button" ng-click="$ctrl.cancel()">Cancel</button>
       </div>
     </div>
