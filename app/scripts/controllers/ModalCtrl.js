@@ -5,7 +5,9 @@
 		  	Room.newRoom(newRoomName);
 			};
       createRoom($scope.newRoomName);
-	    $uibModalInstance.close();
+	    if ($scope.newRoomForm.$valid) {
+	    	$uibModalInstance.close();
+	    }	
 	  };
 	  this.cancel = function () {
 	    $uibModalInstance.dismiss();

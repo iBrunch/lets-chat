@@ -5,18 +5,21 @@
         <h2>Create Room</h2>
       </div>
     </div>
-    
-    <div class="row modal-input">
-      <div class="col">
-        <form name="newRoomForm">
-          <input class="form-control" type="text" placeholder="Name your room" name="roomName" ng-model="newRoomName" ng-minlength="1" ng-maxlength="100" required>
-        </form>
+    <form name="newRoomForm">
+      <div class="row modal-input">
+        <div class="form-group" ng-class="{ 'has-error' : newRoomForm.$invalid }">
+          <input type="text" class="form-control" name="roomName" placeholder="Name your room" required ng-model="newRoomName" ng-minlength="1" ng-maxlength="25" autofocus/>
+        </div>
       </div>
-    </div>
-      
-  <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">OK</button>
+      <div class="modal-buttons">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()" ng-disabled="newRoomForm.$invalid">OK</button>
         <button class="btn btn-secondary" type="button" ng-click="$ctrl.cancel()">Cancel</button>
       </div>
-    </div>
+      <div ng-messages="newRoomForm.roomName.$error">
+        <p ng-message="minlength">Roomname is too short.</p>
+        <p ng-message="maxlength">Roomname is too long (Max Length: 25 characters).</p>
+        <p ng-message="required">Roomname is required.</p>
+      </div>
+    </form>
   </div>
 </div>
