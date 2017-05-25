@@ -1,7 +1,6 @@
 html, body {
   height: 100%;
   width: 100%;
-  background-color: #B3E5FC !important;
 }
 
 ul {
@@ -35,6 +34,52 @@ ul {
   height: 100%;
   width: 250px;
   overflow: auto;
+  z-index: 1;
+}
+
+.chat-container {    
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  min-width: 420px;
+}
+
+.chat-title ,
+.chat-messages {
+  padding: 5px 5px 5px 280px;
+}
+
+.dark {
+  background-color: #e8f7fe;
+}
+
+.light {
+  background-color: #f7fcfe;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+.message {
+  padding-top: 5px;
+  font-size: 14px;
+}
+
+.timestamp.ng-hide {
+    display: block!important;
+    visibility: hidden;
+}
+
+.timestamp {
+  color: grey;
+  font-size: 10px;
+  text-align: right;
 }
 
 .nav-content {

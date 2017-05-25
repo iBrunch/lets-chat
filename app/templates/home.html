@@ -5,7 +5,7 @@
     
     <div class="row nav-content">
       <ul ng-repeat="room in home.rooms">
-        <li class="btn btn-block chat-rooms">{{room.$value}}</li>
+        <li class="btn btn-block chat-rooms" ng-click="home.setCurrentRoom(room)">{{room.$value}}</li>
       </ul>
     </div>
       
@@ -13,4 +13,21 @@
       <button class="btn btn-block btn-create" ng-click="home.open()">New Chat Room</button>
     </div>      
   </div>
+</div>
+
+<div class="chat-container">
+  <div>
+    <h3 class="chat-title">{{ home.currentRoom.$value }}</h3>
+  </div>
+  <ul>
+    <li ng-repeat="message in home.messages" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()" >
+      <div ng-class-odd="'dark'" ng-class-even="'light'">
+        <div class="chat-messages">
+          <div class="username">{{ message.username }}</div>
+          <div class="message">{{ message.content }}</div>
+          <div ng-show="timestamp" class="timestamp">{{ message.sentAt }}</div>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
