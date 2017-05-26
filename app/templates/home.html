@@ -1,12 +1,13 @@
 <div class="container" id="left-nav">
-    <div class="row nav-content">
-      <h1>BlocChat</h1>
+    <div class="row title">
+      <h1 class="nav-content">BlocChat</h1>
     </div>
     
     <div class="row nav-content">
-      <ul ng-repeat="room in home.rooms">
-        <li class="btn btn-block chat-rooms" ng-click="home.setCurrentRoom(room)">{{room.$value}}</li>
-      </ul>
+      <p>ROOMS</p>
+      <div ng-repeat="room in home.rooms">
+        <div class="chat-rooms" ng-click="home.setCurrentRoom(room)">{{room.$value}}</div>
+      </div>
     </div>
       
     <div class="row nav-content">

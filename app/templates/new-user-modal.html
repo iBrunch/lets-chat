@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="modal-wrapper">
+    <div class="row">
+      <div class="col modal-title">
+        <h2>Set Username</h2>
+      </div>
+    </div>
+    <form name="newUsernameForm">
+      <div class="row modal-input">
+        <div class="form-group" ng-class="{ 'has-error' : newUsernameForm.$invalid }">
+          <input type="text" class="form-control" name="username" placeholder="Set your username." required ng-model="$ctrl.newUsername" ng-minlength="1" ng-maxlength="20" autofocus/>
+        </div>
+      </div>
+      <div class="modal-buttons">
+        <button class="btn btn-primary" type="submit" ng-click="$ctrl.createUsername()" ng-disabled="newUsernameForm.$invalid">OK</button>
+      </div>
+      <div ng-messages="newUsernameForm.username.$error">
+        <p ng-message="minlength">Username is too short.</p>
+        <p ng-message="maxlength">Username is too long (Max Length: 20 characters).</p>
+        <p ng-message="required">Username is required.</p>
+      </div>
+    </form>
+  </div>
+</div>

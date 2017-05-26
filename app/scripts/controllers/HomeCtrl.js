@@ -10,7 +10,8 @@
          
          $scope.hoverOut = function(){
              this.timestamp = false;
-         };         
+         };
+         
          $ctrl.open = function () {
            var modalInstance = $uibModal.open({
              templateUrl: '/templates/modal.html',
