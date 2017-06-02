@@ -4,9 +4,9 @@
     </div>
     
     <div class="row nav-content">
-      <p>ROOMS</p>
+      <p class="chat-rooms-title">ROOMS</p>
       <div ng-repeat="room in home.rooms">
-        <div class="chat-rooms" ng-click="home.setCurrentRoom(room)">{{room.$value}}</div>
+        <div class="chat-rooms" ng-click="home.setCurrentRoom(room)">: {{room.$value}}</div>
       </div>
     </div>
       
@@ -16,19 +16,34 @@
   </div>
 </div>
 
-<div class="chat-container">
-  <div>
-    <h3 class="chat-title">{{ home.currentRoom.$value }}</h3>
+<div ng-if="home.currentRoom == null">
+  <div class="splash-page">
+    <h2 class="splash-page-header title"> Say Something</h2>
+    <h1 class="splash-logo title"> with BlocChat</h1>
+    <p class="splash-text">Select a room. Or create a new one.</p>
   </div>
-  <ul>
-    <li ng-repeat="message in home.messages" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()" >
-      <div ng-class-odd="'dark'" ng-class-even="'light'">
-        <div class="chat-messages">
-          <div class="username">{{ message.username }}</div>
-          <div class="message">{{ message.content }}</div>
-          <div ng-show="timestamp" class="timestamp">{{ message.sentAt }}</div>
+</div>
+
+<div ng-if="home.currentRoom !== null">
+  <div class="chat-container">
+    <ul class="chat-window">
+        <div class="chat-title">
+      <h3>{{ home.currentRoom.$value }}</h3>
+    </div>
+      <li ng-repeat="message in home.messages" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()" >
+        <div ng-class-odd="'dark'" ng-class-even="'light'">
+          <div class="chat-messages">
+            <div class="username">{{ message.username }}</div>
+            <div class="message">{{ message.content }}</div>
+            <div ng-show="timestamp" class="timestamp">{{ message.sentAt | date:'h:mm a' }}</div>
+          </div>
         </div>
-      </div>
-    </li>
-  </ul>
+      </li>
+    </ul>
+    
+    <form class="chat-input chat-messages" name="messageForm" ng-submit="home.sendMessage()">
+      <input type="text" name="messageInput" ng-model="home.newMessage.content" autofocus>
+      <input type="submit"></input>
+    </form>
+  </div>
 </div>
