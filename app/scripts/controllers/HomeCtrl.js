@@ -4,7 +4,7 @@
          var $ctrl = this;
          $ctrl.rooms = Room.all;
          $ctrl.currentRoom = null;
-         $ctrl.currentUser = $cookies.get('blocChatCurrentUser');
+         $ctrl.currentUser = $cookies.get('letsChatCurrentUser');
          
          $scope.hoverIn = function(){
              this.timestamp = true;
@@ -41,6 +41,6 @@
      }
  
      angular
-         .module('blocChat')
+         .module('letsChat')
          .controller('HomeCtrl', ['Room', 'Message', '$uibModal', '$scope', '$cookies', HomeCtrl]);
 })();

@@ -15,7 +15,7 @@
 	  };
 	  
 	  this.createUsername = function () {
-    	$cookies.put('blocChatCurrentUser', this.newUsername);
+    	$cookies.put('letsChatCurrentUser', this.newUsername);
     	if ($scope.newUsernameForm.$valid){
     		$uibModalInstance.close();
     	}
@@ -23,6 +23,6 @@
 	}
 	
  angular
-        .module('blocChat')
+        .module('letsChat')
         .controller('ModalCtrl', [ 'Room', '$uibModalInstance', '$scope', '$cookies', ModalCtrl]);
 })();

@@ -18,6 +18,6 @@
     }
 
   angular
-    .module('blocChat')
+    .module('letsChat')
     .factory('Message', ['$firebaseArray', Message]);
 })();

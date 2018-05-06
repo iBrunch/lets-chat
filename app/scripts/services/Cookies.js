@@ -1,6 +1,6 @@
 (function() {
-  function BlocChatCookies($cookies, $uibModal) {
-    var currentUser = $cookies.get('blocChatCurrentUser');
+  function LetsChatCookies($cookies, $uibModal) {
+    var currentUser = $cookies.get('letsChatCurrentUser');
     if (!currentUser || currentUser === '') {
       $uibModal.open({
         templateUrl: '/templates/new-user-modal.html',
@@ -14,6 +14,6 @@
   }
 
   angular
-    .module('blocChat')
-    .run(['$cookies', '$uibModal', BlocChatCookies]);
+    .module('letsChat')
+    .run(['$cookies', '$uibModal', LetsChatCookies]);
 })();
